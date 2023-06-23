@@ -114,7 +114,7 @@
         <!-- JavaScript Unduh -->
         <script>
             function unduhDokumen1() {
-                fetch('download/', {
+                fetch('<?= base_url('download/'); ?>', {
                         method: 'GET'
                     })
                     .then((response) => response.blob())
@@ -122,7 +122,7 @@
                         const url = window.URL.createObjectURL(blob);
                         const a = document.createElement('a');
                         a.href = url;
-                        a.download = 'Kesimpulan - Metode Penelitian - 13020200034 - ArifRahman.docx';
+                        a.download = 'PANDUAN_PENDAFTARAN.pdf';
                         document.body.appendChild(a);
                         a.click();
                         window.URL.revokeObjectURL(url);
@@ -133,7 +133,7 @@
             }
 
             function unduhDokumen2() {
-                fetch('download/', {
+                fetch('<?= base_url('download/'); ?>', {
                         method: 'GET'
                     })
                     .then((response) => response.blob())
@@ -141,7 +141,7 @@
                         const url = window.URL.createObjectURL(blob);
                         const a = document.createElement('a');
                         a.href = url;
-                        a.download = 'Rangkuman 8-13 KEJAR.docx';
+                        a.download = 'PANDUAN_PENDAFTARAN.pdf';
                         document.body.appendChild(a);
                         a.click();
                         window.URL.revokeObjectURL(url);

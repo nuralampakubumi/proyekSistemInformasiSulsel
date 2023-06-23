@@ -114,7 +114,7 @@
         <!-- JavaScript Unduh -->
         <script>
             function unduhDokumen1() {
-                fetch('<?= base_url('download/'); ?>', {
+                fetch('<?= base_url('assets/download/PANDUAN_PENDAFTARAN.pdf') ?>', {
                         method: 'GET'
                     })
                     .then((response) => response.blob())
@@ -125,6 +125,7 @@
                         a.download = 'PANDUAN_PENDAFTARAN.pdf';
                         document.body.appendChild(a);
                         a.click();
+                        document.body.removeChild(a);
                         window.URL.revokeObjectURL(url);
                     })
                     .catch((error) => {
@@ -133,7 +134,7 @@
             }
 
             function unduhDokumen2() {
-                fetch('<?= base_url('download/'); ?>', {
+                fetch('<?= base_url('assets/download/PANDUAN_PENDAFTARAN.pdf') ?>', {
                         method: 'GET'
                     })
                     .then((response) => response.blob())
@@ -144,6 +145,7 @@
                         a.download = 'PANDUAN_PENDAFTARAN.pdf';
                         document.body.appendChild(a);
                         a.click();
+                        document.body.removeChild(a);
                         window.URL.revokeObjectURL(url);
                     })
                     .catch((error) => {

@@ -11,7 +11,7 @@
                 <?= session()->getFlashdata('error'); ?>
             </div>
         <?php endif; ?>
-        <div class="col-6 border border-warning p-5">
+        <div class="col-lg-6 border border-warning p-5">
             <form action="<?= base_url('home/loginLogic') ?> " method="post">
                 <?= csrf_field(); ?>
                 <div class="mb-3">
